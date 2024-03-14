@@ -177,7 +177,7 @@ for (int i = 0; i < size; i++,walkman++)
             return walkman;
         }
     }
-    return NULL;
+    return nullptr;
     //returns pointer of the memory location of find_me
 }     //search for 'find me'
 

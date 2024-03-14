@@ -29,7 +29,16 @@ else {
     return false;
 }
 }
-bool logout(int** labs, int* sizes, int id){
 
+bool logout(int** labs, int* sizes, int id){
+int row , col;
+bool condition = search_twod <int> (labs,sizes, id, row, col);
+if (condition){
+write_twod <int> (labs, row, col, -1);
+cout<<"User Logged Out\n";
+return true;
+    }
+cout<<"Not in use\n";
+return false;
 }
 #endif

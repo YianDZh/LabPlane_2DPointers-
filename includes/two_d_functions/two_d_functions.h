@@ -153,6 +153,23 @@ void init_twod(T** twod, int* sizes, T init_item){
 
 template<class T>
 bool search_twod(T** twod, int* sizes, const T& key, int& row, int& col){
+    T** walkman=twod;
+    int count = array_size(sizes);
+    int *sizes_walker = sizes;
+    int current_row = 0;
+    int current_col=0;
+    for (int i = 0; i < count; i++, walkman++,current_row++)
+    {
+        T* walkman_jr= *walkman;
+        int current_size= *sizes_walker;
+        current_col=search (walkman_jr, current_size, key);
+        if(current_col!=-1){
+            row = current_row;
+            col=current_col;
+            return true;
+        }
+    }
+    return false;
 }
 
 //return a pointer to the item if found, nullptr if not found: 
@@ -167,6 +184,9 @@ T* search_twod(T** twod, int* sizes, const T& key){
         walkman_jr=*walkman;
         int current= *size_walker;
         search_entry <T> (walkman_jr,current,key);
+        if (walkman_jr!=*walkman){
+            break;
+        }
     }
     return walkman_jr;
 }
