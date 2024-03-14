@@ -7,8 +7,8 @@ score:         [0/100]
 class:         CS003A 36335
 github page:   <a href="https://github.com/barkeshli-CS003A-classroom/09_p3_p5_lab_and_plane-yiandzh " target = "_blank">GitHub</a>
 discord:       
-timestamp:     03/12/2024 13:41:13
-commit hash:   6a7bd61
+timestamp:     03/14/2024 01:17:38
+commit hash:   27dd96d
 Canvas         <a href="https://canvas.pasadena.edu/courses/1142591/gradebook/speed_grader?assignment_id=9956113&student_id=3852939" target = "_blank">Canvas</a>
 grader:        pi(posix)
 ===========================================================
@@ -25,17 +25,17 @@ Note: Google Test filter = TwoDTest.ReadWriteNSearch8358
 [----------] Global test environment set-up.
 [----------] 1 test from TwoDTest
 [ RUN      ] TwoDTest.ReadWriteNSearch8358
-wrote 33 at twod[3, 2] but found 0 instead 
+wrote 33 to twod[0, 0] but search returned (3, 2) instead. 
 /_tests/_test_files/testA.cpp:423: Failure
 Expected equality of these values:
   success
     Which is: false
   true
 [  FAILED  ] TwoDTest.ReadWriteNSearch8358 (0 ms)
-[----------] 1 test from TwoDTest (0 ms total)
+[----------] 1 test from TwoDTest (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 0 tests.
 [  FAILED  ] 1 test, listed below:
 [  FAILED  ] TwoDTest.ReadWriteNSearch8358
@@ -64,7 +64,7 @@ Expected equality of these values:
 [----------] 1 test from TwoDArray (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 0 tests.
 [  FAILED  ] 1 test, listed below:
 [  FAILED  ] TwoDArray.GetNSearch8358
@@ -90,11 +90,11 @@ Expected equality of these values:
   success
     Which is: false
   true
-[  FAILED  ] LabTest.LogInOut8158 (0 ms)
-[----------] 1 test from LabTest (0 ms total)
+[  FAILED  ] LabTest.LogInOut8158 (1 ms)
+[----------] 1 test from LabTest (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 0 tests.
 [  FAILED  ] 1 test, listed below:
 [  FAILED  ] LabTest.LogInOut8158
@@ -161,94 +161,57 @@ Scanning dependencies of target gtest_main
 [100%] Built target gtest_main
 
 -------- stderr:  ---------------------------------
-In file included from /_tests/_test_files/testA.cpp:9:
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In function ‘int array_size(int*)’:
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:50:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   50 | }
+In file included from /_tests/_test_files/../../includes/lab/lab.h:7,
+                 from /_tests/_test_files/testA.cpp:7:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘bool search_twod(T**, int*, const T&amp;, int&amp;, int&amp;)’:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:156:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  156 | }
       | ^
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In function ‘bool index_is_valid(int*, int, int)’:
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:54:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   54 | }
+In file included from /_tests/_test_files/testA.cpp:7:
+/_tests/_test_files/../../includes/lab/lab.h: In function ‘bool logout(int**, int*, int)’:
+/_tests/_test_files/../../includes/lab/lab.h:34:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   34 | }
       | ^
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In function ‘bool search_twod(T**, int*, const T&amp;, int&amp;, int&amp;)’:
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:120:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  120 | }
-      | ^
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:143:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  143 | }
-      | ^
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T&amp; get_twod(T**, int, int) [with T = int]’:
+In file included from /_tests/_test_files/../../includes/lab/lab.h:7,
+                 from /_tests/_test_files/testA.cpp:7:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T&amp; get_twod(T**, int, int) [with T = int]’:
 /_tests/_test_files/testA.cpp:197:30:   required from here
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:99:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   99 | }
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:137:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  137 | }
       | ^
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T** deallocate_twod(T**, int) [with T = bool]’:
-/_tests/_test_files/testA.cpp:401:35:   required from here
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:87:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   87 | }
+In file included from /_tests/_test_files/../../includes/lab/lab.h:7,
+                 from /_tests/_test_files/basic_test.cpp:9:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘bool search_twod(T**, int*, const T&amp;, int&amp;, int&amp;)’:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:156:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  156 | }
       | ^
-In file included from /_tests/_test_files/basic_test.cpp:11:
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In function ‘int array_size(int*)’:
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:50:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   50 | }
+In file included from /_tests/_test_files/basic_test.cpp:9:
+/_tests/_test_files/../../includes/lab/lab.h: In function ‘bool logout(int**, int*, int)’:
+/_tests/_test_files/../../includes/lab/lab.h:34:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   34 | }
       | ^
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In function ‘bool index_is_valid(int*, int, int)’:
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:54:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   54 | }
-      | ^
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In function ‘bool search_twod(T**, int*, const T&amp;, int&amp;, int&amp;)’:
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:120:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  120 | }
-      | ^
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:143:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  143 | }
-      | ^
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T read_twod(T**, int, int) [with T = int]’:
-/_tests/_test_files/basic_test.cpp:27:43:   required from here
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:91:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   91 | }
-      | ^
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T&amp; get_twod(T**, int, int) [with T = int]’:
+In file included from /_tests/_test_files/../../includes/lab/lab.h:7,
+                 from /_tests/_test_files/basic_test.cpp:9:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T&amp; get_twod(T**, int, int) [with T = int]’:
 /_tests/_test_files/basic_test.cpp:30:20:   required from here
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:99:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   99 | }
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:137:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  137 | }
       | ^
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T** deallocate_twod(T**, int) [with T = int]’:
-/_tests/_test_files/basic_test.cpp:69:29:   required from here
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:87:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   87 | }
-      | ^
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T** deallocate_twod(T**, int) [with T = bool]’:
-/_tests/_test_files/basic_test.cpp:194:35:   required from here
-/_tests/_test_files/../../includes/two_d_functions/two_d_functions.h:87:1: warning: no return statement in function returning non-void [-Wreturn-type]
 In file included from /main.cpp:3:
-/includes/two_d_functions/two_d_functions.h: In function ‘int array_size(int*)’:
-/includes/two_d_functions/two_d_functions.h:50:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   50 | }
-      | ^
-/includes/two_d_functions/two_d_functions.h: In function ‘bool index_is_valid(int*, int, int)’:
-/includes/two_d_functions/two_d_functions.h:54:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   54 | }
-      | ^
 /includes/two_d_functions/two_d_functions.h: In function ‘bool search_twod(T**, int*, const T&amp;, int&amp;, int&amp;)’:
-/includes/two_d_functions/two_d_functions.h:120:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  120 | }
+/includes/two_d_functions/two_d_functions.h:156:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  156 | }
       | ^
-/includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
-/includes/two_d_functions/two_d_functions.h:143:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  143 | }
+In file included from /main.cpp:4:
+/includes/lab/lab.h: In function ‘bool logout(int**, int*, int)’:
+/includes/lab/lab.h:34:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   34 | }
       | ^
-/includes/two_d_functions/two_d_functions.h: In instantiation of ‘T read_twod(T**, int, int) [with T = int]’:
-/main.cpp:182:35:   required from here
-/includes/two_d_functions/two_d_functions.h:91:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   91 | }
-      | ^
+In file included from /main.cpp:3:
 /includes/two_d_functions/two_d_functions.h: In instantiation of ‘T&amp; get_twod(T**, int, int) [with T = int]’:
 /main.cpp:217:32:   required from here
-/includes/two_d_functions/two_d_functions.h:99:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   99 | }
+/includes/two_d_functions/two_d_functions.h:137:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  137 | }
       | ^
 
 ============= CMAKE output: [yiandzh] 
