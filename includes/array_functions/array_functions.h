@@ -162,7 +162,7 @@ void print(T* a, unsigned int how_many,ostream& outs){
        T *walkman = a;
         for (int i = 0; i < how_many;i++, walkman++)
     {
-        cout<<setw(3)<<*walkman;
+        cout<<" | "<<*walkman<<" | ";
     }
     cout<<"\n";
 }  //print array

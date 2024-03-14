@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include <iostream>
 #include <iomanip>
+#include "../../includes/two_d_functions/two_d_functions.h"
 using namespace std;
 
 bool test_stub(bool debug = false)
@@ -9,6 +10,12 @@ bool test_stub(bool debug = false)
     cout << "testB:: test-sub() entering test_sub" << endl;
   }
   return true;
+}
+bool test_init (bool debug= false){
+  int size =5;
+  int sizes [size]={4,2,7,6,1};
+  int ** bd2= allocate_twod <int> (sizes);
+  cout<<"Created 2D array\n";
 }
 
 TEST(TEST_STUB, TestStub) {

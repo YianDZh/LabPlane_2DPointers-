@@ -1,6 +1,9 @@
 #ifndef PLANE_H
 #define PLANE_H
 #include <iostream>
+#include "../../includes/array_functions/array_functions.h"
+#include "../../includes/two_d_functions/two_d_functions.h"
+
 #include <ostream>
 #include "assert.h"
 using namespace std;

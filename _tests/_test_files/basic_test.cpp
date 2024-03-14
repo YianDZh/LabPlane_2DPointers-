@@ -8,7 +8,6 @@
 
 #include "../../includes/lab/lab.h"
 #include "../../includes/plane/plane.h"
-#include "../../includes/two_d_functions/two_d_functions.h"
 
 using namespace std;
 
