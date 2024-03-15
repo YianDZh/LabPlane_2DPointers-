@@ -175,7 +175,6 @@ for (int i = 0; i < size; i++,walkman++)
     {
         if (*walkman ==find_me)
         {
-            cout<<*walkman<<"\n";
             return walkman;
         }
     }
