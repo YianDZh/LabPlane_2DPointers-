@@ -123,14 +123,18 @@ T read_twod(T** twod, int row, int col){
 
 template <class T>
 void write_twod(T** twod, int row, int col, const T& item){
+    //!REQUIRES TO CHECK ERROR HANDLING
     T** walkman = twod+row;
     if (walkman ==NULL){
+                cout<<"Not\n";
         return;
     }
     T* walkman_jr =*walkman;
     walkman_jr+=col;
-    // assert (walkman_jr!=NULL);
-    //**Might need it 
+    if (walkman_jr ==NULL){
+        cout<<"Not\n";
+        return;
+    }    //**Might need it 
     *walkman_jr = item;
 }
 
@@ -166,44 +170,51 @@ bool search_twod(T** twod, int* sizes, const T& key, int& row, int& col){
     int *sizes_walker = sizes;
     int current_row = 0;
     int current_col=0;
-    for (int i = 0; i < count; i++, walkman++,current_row++)
+    T* walkman_jr;
+    for (int i = 0; i < count; i++, walkman++,current_row++,sizes_walker++)
     {
-        T* walkman_jr= *walkman;
+        walkman_jr= *walkman;
         int current_size= *sizes_walker;
-        current_col=search (walkman_jr, current_size, key);
+        current_col=search <T> (walkman_jr, current_size, key);
         if(current_col!=-1){
             row = current_row;
             col=current_col;
             return true;
         }
     }
+    //cout<<current_row;
+    //cout<<current_col;
+    //!Look into this
+    if (current_col ==-1)
+    {
     return false;
+    }
+    
 }
 
 //return a pointer to the item if found, nullptr if not found: 
 //                                                 (Ms. Barskhian)
 template<class T> 
 T* search_twod(T** twod, int* sizes, const T& key){
-    int count = array_size (sizes);
-    T** walkman= twod;
-    int* size_walker =sizes;
-    T* walkman_jr;
-    for (int i=0; i<count;i++,walkman++, sizes++){
-        walkman_jr=*walkman;
-        int current= *size_walker;
-        search_entry <T> (walkman_jr,current,key);
-        if (walkman_jr!=*walkman){
-            break;
-        }
+    int row = -1;
+    int col =-1;
+    bool chance = search_twod <T> (twod,sizes,key,row,col);
+    if (chance){
+        T** pos = (twod+row);
+        T* result = (*pos)+col;
+        return result;
     }
-    return walkman_jr;
+    else{
+        cout<<"Not found\n";
+        return nullptr;
+    }
 }
 
 template <class T>
 ostream& print_twod(T** twod, int* sizes, ostream& outs){
     cout<<"Printing 2D Array\n";
     T** walkman = twod;
-    T* size_walker= sizes;
+    int* size_walker= sizes;
     int count = array_size (sizes);
     
     for (int i = 0; i < count; i++,size_walker++, walkman++)
