@@ -3,12 +3,12 @@
 ===========================================================
 id:            yiandzh
 name:          Zhuang Zhigue, Yian
-score:         [35/100]
+score:         [85/100]
 class:         CS003A 36335
 github page:   <a href="https://github.com/barkeshli-CS003A-classroom/09_p3_p5_lab_and_plane-yiandzh " target = "_blank">GitHub</a>
 discord:       
-timestamp:     03/14/2024 18:13:04
-commit hash:   ddab810
+timestamp:     03/15/2024 02:45:47
+commit hash:   44b73e3
 Canvas         <a href="https://canvas.pasadena.edu/courses/1142591/gradebook/speed_grader?assignment_id=9956113&student_id=3852939" target = "_blank">Canvas</a>
 grader:        pi(posix)
 ===========================================================
@@ -25,22 +25,12 @@ Note: Google Test filter = TwoDTest.ReadWriteNSearch8358
 [----------] Global test environment set-up.
 [----------] 1 test from TwoDTest
 [ RUN      ] TwoDTest.ReadWriteNSearch8358
-wrote 43 to twod[0, 0] but search returned false
-/_tests/_test_files/testA.cpp:423: Failure
-Expected equality of these values:
-  success
-    Which is: false
-  true
-[  FAILED  ] TwoDTest.ReadWriteNSearch8358 (1 ms)
-[----------] 1 test from TwoDTest (1 ms total)
+[       OK ] TwoDTest.ReadWriteNSearch8358 (0 ms)
+[----------] 1 test from TwoDTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
-[  PASSED  ] 0 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] TwoDTest.ReadWriteNSearch8358
-
- 1 FAILED TEST
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
 
 
 -------- TwoDTest.ReadWriteNSearch8358:  return code: [0]  --------------
@@ -58,7 +48,7 @@ Note: Google Test filter = TwoDArray.GetNSearch8358
 [----------] 1 test from TwoDArray (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 
 
@@ -73,22 +63,12 @@ Note: Google Test filter = LabTest.LogInOut8158
 [----------] Global test environment set-up.
 [----------] 1 test from LabTest
 [ RUN      ] LabTest.LogInOut8158
-logged out of [6, 4] but found 43 instead of 0 
-/_tests/_test_files/testA.cpp:434: Failure
-Expected equality of these values:
-  success
-    Which is: false
-  true
-[  FAILED  ] LabTest.LogInOut8158 (1 ms)
-[----------] 1 test from LabTest (1 ms total)
+[       OK ] LabTest.LogInOut8158 (0 ms)
+[----------] 1 test from LabTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
-[  PASSED  ] 0 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] LabTest.LogInOut8158
-
- 1 FAILED TEST
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
 
 
 -------- LabTest.LogInOut8158:  return code: [0]  --------------
@@ -150,7 +130,24 @@ Scanning dependencies of target gtest_main
 [100%] Built target gtest_main
 
 -------- stderr:  ---------------------------------
-EMPTY
+In file included from /_tests/_test_files/../../includes/lab/lab.h:7,
+                 from /_tests/_test_files/testA.cpp:7:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘bool search_twod(T**, int*, const T&amp;, int&amp;, int&amp;) [with T = int]’:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+  193 | }
+      | ^
+In file included from /_tests/_test_files/../../includes/lab/lab.h:7,
+                 from /_tests/_test_files/basic_test.cpp:9:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘bool search_twod(T**, int*, const T&amp;, int&amp;, int&amp;) [with T = int]’:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+  193 | }
+      | ^
+In file included from /main.cpp:3:
+/includes/two_d_functions/two_d_functions.h: In function ‘bool search_twod(T**, int*, const T&amp;, int&amp;, int&amp;) [with T = int]’:
+/includes/two_d_functions/two_d_functions.h:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+  193 | }
+      | ^
+
 ============= CMAKE output: [yiandzh] 
 -------- stdout:  ---------------------------------
 -- The C compiler identification is GNU 9.4.0
