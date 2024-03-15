@@ -13,13 +13,13 @@ bool logout(int** labs, int* sizes, int id);
 
 int **init_lab(int* stations){
     int ** lab = allocate_twod <int> (stations);
-    init_twod (lab,stations, -1);
+    init_twod (lab,stations, 0);
     return lab;
 }
 
 bool login(int** labs, int lab, int station, int id){
 int current = read_twod <int> (labs, lab, station);
-if (current==-1){
+if (current==0){
 write_twod <int> (labs, lab, station, id );
 cout<<"Logged id: "<< id<< " in station: "<<station<< " ,at lab: "<<lab<<"\n";
 return true;
@@ -34,7 +34,7 @@ bool logout(int** labs, int* sizes, int id){
 int row , col;
 bool condition = search_twod <int> (labs,sizes, id, row, col);
 if (condition){
-write_twod <int> (labs, row, col, -1);
+write_twod <int> (labs, row, col, 0);
 cout<<"User Logged Out\n";
 return true;
     }

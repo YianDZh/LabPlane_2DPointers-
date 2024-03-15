@@ -87,13 +87,12 @@ T** allocate_twod(int* sizes){
     T** list = new T* [count];
     T** limit = list+count;
     T**walker=list;
-    for (int i = 0; i < count; i++,w_size++){
-         if (walker==limit){
-            break;
+    for (int i = 0; i < count; i++,w_size++,walker++){
+        if (walker==limit){
+            *walker=nullptr;
         }
         int current=*w_size;
         *walker = allocate <T> (current);
-        walker++;
     }
     return list;
 }
@@ -102,11 +101,14 @@ template <class T>
 T** deallocate_twod(T** twod, int size){
     T**walkman = twod;
     for (int i=0; i<size;i++, walkman++){
-        T*walkman_jr = *walkman;
+         T*walkman_jr = *walkman;
+        if (walkman_jr==nullptr){
+            delete [] walkman;
+            break;
+        }
         delete [] walkman_jr;
     }
-    delete [] walkman;
-    return twod;
+    return nullptr;
 }
 
 template <class T>
@@ -134,6 +136,12 @@ void write_twod(T** twod, int row, int col, const T& item){
 
 template <class T>
 T& get_twod(T** twod, int row, int col){
+        T** walkman = twod+row;
+        assert (walkman!=NULL);
+        T* walkman_jr =*walkman;
+        walkman_jr+=col;
+        assert (walkman_jr!=NULL);
+        return *walkman_jr;
 }
 
 template<class T>

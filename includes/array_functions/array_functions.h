@@ -2,6 +2,7 @@
 #define ARRAY_FUNCTIONS_H
 
 #include "array_functions.h"
+#include <typeinfo> 
 #include "iomanip"
 #include "iostream"
 #include "string.h"
@@ -277,13 +278,15 @@ void append(T* a, int& size, T append_me){
 }
 template <class T>
 string array_string(const T *a, int size){
-    string test = " ";
+    string test = "";
     const T* walkman = a;
     for (int i = 0; i < size; i++, walkman++){
+    if (typeid(char)!=typeid(*walkman))
     test += to_string(*walkman);
+    else 
+    test += *walkman;
     }
     return test;
-    
 }              //return array 
                                                         //  as a string
 
