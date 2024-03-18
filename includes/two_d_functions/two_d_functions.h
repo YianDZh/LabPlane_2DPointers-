@@ -108,7 +108,7 @@ T** deallocate_twod(T** twod, int size){
         }
         delete [] walkman_jr;
     }
-    return nullptr;
+    return walkman;
 }
 
 template <class T>
@@ -212,7 +212,7 @@ T* search_twod(T** twod, int* sizes, const T& key){
 
 template <class T>
 ostream& print_twod(T** twod, int* sizes, ostream& outs){
-    cout<<"Printing 2D Array\n";
+    // cout<<"Printing 2D Array\n";
     T** walkman = twod;
     int* size_walker= sizes;
     int count = array_size (sizes);

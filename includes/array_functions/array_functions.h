@@ -160,7 +160,7 @@ void print_array(T* a, int size, int capacity, ostream& outs){
 
 template <class T>
 void print(T* a, unsigned int how_many,ostream& outs){
-       T *walkman = a;
+    T *walkman = a;
         for (int i = 0; i < how_many;i++, walkman++)
     {
         cout<<" | "<<*walkman<<" | ";

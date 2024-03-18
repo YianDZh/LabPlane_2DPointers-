@@ -21,7 +21,7 @@ bool login(int** labs, int lab, int station, int id){
 int current = read_twod <int> (labs, lab, station);
 if (current==0){
 write_twod <int> (labs, lab, station, id );
-cout<<"Logged id: "<< id<< " in station: "<<station<< " ,at lab: "<<lab<<"\n";
+cout<<"Logged id: "<< id<< " in station: "<<station+1<< " ,at lab: "<<lab+1<<"\n";
 return true;
 }
 else {
@@ -35,10 +35,11 @@ int row , col;
 bool condition = search_twod <int> (labs,sizes, id, row, col);
 if (condition){
 write_twod <int> (labs, row, col, 0);
-cout<<"User Logged Out\n";
+cout<<"User id: "<<id<< " has Logged Out\n";
 return true;
     }
 cout<<"Not in use\n";
 return false;
 }
+void lab_test (){}
 #endif

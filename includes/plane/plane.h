@@ -58,10 +58,12 @@ void print_seats (bool* row,int size){
     bool *walkman = row;
         for (int i = 0; i < size;i++, walkman++)
     {
+        char out='A'+i;
         if (*walkman)
         cout<<" | "<<'X'<<" | ";
         else if (!*walkman)
-        cout<<" | "<<'O'<<" | ";
+        cout<<" | "<<out<<" | ";
+
     }
     cout<<"\n";
 }
