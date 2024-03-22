@@ -32,7 +32,70 @@
 # **output**
 <pre>
 <br/><br/><br/><br/>
-## Delete this line and paste the output of your basic test and then testB here
+What project would you like to try?
+[P]lane           [L]ab
+p
+Plese input what kind of action you would like to do
+[r]eserve     [c]ancel     e[x]it
+r
+
+
+Please write where do you want to make your reservation
+    A      B      C      D
+1 | A |  | B |  | C |  | D |
+2 | A |  | B |  | C |  | D |
+3 | A |  | B |  | C |  | D |
+4 | A |  | B |  | C |  | D |
+5 | A |  | B |  | C |  | D |
+6 | A |  | B |  | C |  | D |
+7 | A |  | B |  | C |  | D |
+Please write the row number you want
+1
+Please write the seat number you want
+1
+Reservation succesful!
+    A      B      C      D
+1 | X |  | B |  | C |  | D |
+2 | A |  | B |  | C |  | D |
+3 | A |  | B |  | C |  | D |
+4 | A |  | B |  | C |  | D |
+5 | A |  | B |  | C |  | D |
+6 | A |  | B |  | C |  | D |
+7 | A |  | B |  | C |  | D |
+Please comeback soon!
+Would you like to do another operation?
+y
+Plese input what kind of action you would like to do
+[r]eserve     [c]ancel     e[x]it
+c
+
+
+Please write the possition you want to cancel
+    A      B      C      D
+1 | X |  | B |  | C |  | D |
+2 | A |  | B |  | C |  | D |
+3 | A |  | B |  | C |  | D |
+4 | A |  | B |  | C |  | D |
+5 | A |  | B |  | C |  | D |
+6 | A |  | B |  | C |  | D |
+7 | A |  | B |  | C |  | D |
+Please write the row number you want
+1
+Please write the seat you want
+1
+Cancellation succesful!
+    A      B      C      D
+1 | A |  | B |  | C |  | D |
+2 | A |  | B |  | C |  | D |
+3 | A |  | B |  | C |  | D |
+4 | A |  | B |  | C |  | D |
+5 | A |  | B |  | C |  | D |
+6 | A |  | B |  | C |  | D |
+7 | A |  | B |  | C |  | D |
+Please comeback soon!
+Would you like to do another operation?
+n
+Thank for trying it out!
 </pre>
 
 
